@@ -1,0 +1,236 @@
+:root {
+    --oscuro: #060A24;
+    --claro: #FFFFFF
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    width: 100%;
+
+}
+.logoi {
+    width: 130%;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2.5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu {
+    display: none;
+    width: 100vw;
+}
+
+#hamburguesa {
+    display: none;
+}
+ #hamburguesa:checked ~ .menu {
+    top: 45px;
+    display: block;
+    position: absolute;
+    margin-top: 1%;
+    background-color: #0000ec;
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: white;
+}  
+
+.menu li a {
+    text-decoration: none;
+    color: white
+}
+
+.menu li a:hover {
+    text-decoration: line-through;
+    color:  #00F3BB;
+    font-weight: 500;
+}
+.menu li a:active {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.425) ;
+}
+.menu .item1 {
+padding:16px
+
+}
+
+/* padding del menu */
+
+.nav--hamburguesa {
+    margin-right: 1.33rem;
+}
+
+.icono {
+    margin-left: 1.33rem;
+}
+
+/* padding del menu */
+
+
+.nav--hamburguesa::after {
+    content: url(/images/icona.svg);
+
+}
+
+#hamburguesa:checked + .nav--hamburguesa::after {
+    content: url(/images/iconb.svg);
+
+}
+
+h2 {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--oscuro);
+    margin-top: 2.33rem;
+}
+
+.cuerpo {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
+.tachado {
+text-decoration: line-through;
+margin: 0 1rem; 
+}
+
+p.parrafo-mobile {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 400;
+    font-size: 4.2vw;
+    text-align: justify;
+    color: var(--oscuro);
+    margin-top: 1.33rem;
+    line-height: 6.6vw;
+}
+.parrafo-tdesktop {
+    display: none;
+}
+
+.boton1 {
+    background-color: #00F3BB;
+    width: 100%;
+    padding: 4.5% 0;
+    margin-top: 36px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+}
+.boton1 a {
+    text-decoration: none;
+    color: var(--oscuro);
+    padding: 1rem;
+    padding: 1rem 2.7rem;
+}
+
+.boton1:hover {
+    background: rgb(0,240,184);
+    background: linear-gradient(90deg, rgba(0,240,184,1) 0%, rgba(0,0,254,1) 100%);
+
+}
+
+.boton1 a:hover {
+    color: white;
+}
+
+.bloque rect {
+    fill: blue;
+/*     clip-path:polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    background-color: #0000EC; */
+}
+.fondo {
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+
+}
+.iframes {
+    padding-top: 3rem;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: space-around;  
+}
+.iframes iframe {
+    padding-right: 3rem;
+}
+
+@media (min-width: 768px)
+ {
+    .icono {
+        margin-left: 3rem;
+    }
+
+    .logoi {
+        width: 150%;
+    }
+
+    nav {
+        margin-top: 0;
+        flex-wrap: initial;
+    }
+    #hamburguesa, .nav--hamburguesa {
+        display:none
+    }
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        font-family: 'IBM Plex Mono', monospace;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1rem;
+        margin-right: 3rem;
+       
+
+    }
+    
+    .menu li {
+        list-style: none;
+    }
+    .menu li a {
+        text-decoration: none;
+        color: var(--oscuro);
+    }
+    h2 {
+        font-size: 4rem;
+        margin-top: 13.1%;
+    }
+    .cuerpo {
+        padding-left: 13.9%;
+        padding-right: 13.9%;
+        box-sizing: border-box;
+    }
+    p.parrafo-mobile {
+        display: none;
+    }
+    .boton1 {
+        width: 12rem;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .parrafo-tdesktop {
+        display: block;
+        font-family: 'IBM Plex Mono', monospace;
+        width: 38rem;
+        font-weight: 400;
+        text-align: justify;
+        color: var(--oscuro);
+        line-height: 1.33rem;
+    }
+ }
